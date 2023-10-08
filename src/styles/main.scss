@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$white: rgba(255, 255, 255, 1);
+$beige: rgba(243, 242, 240, 1);
+$dark: rgba(35, 35, 38, 1);
+$red: rgba(212, 0, 0, 1);
+
+$font-inter: font-family: 'Inter', sans-serif;
+
+html {
+    font-size: 10px;
+    @media (max-width: $r_mob500) {
+        font-size: 8px;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $font-inter;
+    color: $beige;
+    overflow-x: hidden;
+    background-color: $dark;
+}
