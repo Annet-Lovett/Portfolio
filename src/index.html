@@ -57,22 +57,40 @@
                 </h2>
 
                 <div class="info__discuss">
-                    <p class="info__project-discuss">Обсудить проект</p>
-                    <div class="social social_info">
-                        <ul class="social__list">
-                            <li class="social__item">
-                                <a href="" class="social__icon">Vk</a>
-                            </li>
-
-                            <li class="social__item">
-                                <a href="" class="social__icon">Instagram</a>
-                            </li>
-
-                            <li class="social__item">
-                                <a href="" class="social__icon">Linkedin</a>
-                            </li>
-                        </ul>
+                    <button type="button" class="info__project-discuss" onclick="openModal()">Обсудить проект</button>
+                    <div class="modal" id="modal">
+                        <button class="modal__close" onclick="closeModal()"></button>
+                        <div class="modal__container">
+                            <p class="modal__title">Расскажите о своем проекте</p>
+                            <p class="modal__description">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                            <form class="feedback__form feedback__form_modal">
+                                <label class="feedback__label feedback__label_modal">Телефон или почта</label>
+                                <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
+                                <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
+                                <select class="feedback__select feedback__select_modal">
+                                    <option class="feedback__value" value="TG">Telegram</option>
+                                    <option class="feedback__value" value="WA">WhatsApp</option>
+                                    <option class="feedback__value" value="VB">Viber</option>
+                                    <option class="feedback__value" value="RG">Звонок на телефон</option>
+                                    <option class="feedback__value" value="SMS">SMS сообщение</option>
+                                </select>
+                                <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
+                            </form>           
+                        </div>           
                     </div>
+                    <ul class="social social_info">
+                        <li class="social__item">
+                            <a href="" class="social__icon">Vk</a>
+                        </li>
+
+                        <li class="social__item">
+                            <a href="" class="social__icon">Instagram</a>
+                        </li>
+
+                        <li class="social__item">
+                            <a href="" class="social__icon">Linkedin</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <ul class="info__skills">
@@ -140,17 +158,17 @@
             <div class="container">
                 <ul class="order__list">
                     <li class="order__item">
-                        <p class="order__step">01&nbsp;&nbsp;&nbsp;&nbsp;Вы заказываете сайт</p>
+                        <p class="order__step">01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вы заказываете сайт</p>
                         <p class="order__description">Связываетесь со мной по телефону или через заявку на сайте</p>
                     </li>
 
                     <li class="order__item">
-                        <p class="order__step">02&nbsp;&nbsp;&nbsp;&nbsp;Обговариваем детали</p>
+                        <p class="order__step">02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Обговариваем детали</p>
                         <p class="order__description">Созваниваемся или списываемся любым удобным для вас способом</p>
                     </li>
 
                     <li class="order__item">
-                        <p class="order__step">03&nbsp;&nbsp;&nbsp;&nbsp;Этап программирования</p>
+                        <p class="order__step">03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Этап программирования</p>
                         <p class="order__description">Верстаю сайт по вашему проекту пиксель в пиксель</p>
                     </li>
                 </ul>
@@ -280,7 +298,27 @@
                         <div class="tarif__description">
                             <p class="tarif__name">Разработка<br> лэндинга или сайт визитки</p>
                             <p class="tarif__site">Небольшой сайт состоящий из одной страницы</p>
-                            <p class="tarif__discuss">Обсудить объект</p>
+                            <button class="tarif__discuss" onclick="openModal_2 ()">Обсудить проект</button>
+                            <div class="modal modal_2" id="modal_2">
+                                <button class="modal__close" onclick="closeModal_2 ()"></button>
+                                <div class="modal__container">
+                                    <p class="modal__title">Расскажите о своем проекте</p>
+                                    <p class="modal__description">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                                    <form class="feedback__form feedback__form_modal">
+                                        <label class="feedback__label feedback__label_modal">Телефон или почта</label>
+                                        <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
+                                        <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
+                                        <select class="feedback__select feedback__select_modal">
+                                            <option class="feedback__value" value="TG">Telegram</option>
+                                            <option class="feedback__value" value="WA">WhatsApp</option>
+                                            <option class="feedback__value" value="VB">Viber</option>
+                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
+                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
+                                        </select>
+                                        <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
+                                    </form>           
+                                </div> 
+                            </div>
                         </div>
 
                         <div class="tarif__include">
@@ -298,7 +336,27 @@
                         <div class="tarif__description">
                             <p class="tarif__name">Разработка<br> корпоративного сайта</p>
                             <p class="tarif__site">Небольшой сайт с n-количеством страниц</p>
-                            <p class="tarif__discuss">Обсудить объект</p>
+                            <button class="tarif__discuss"  onclick="openModal_3 ()">Обсудить проект</button>
+                            <div class="modal modal_3" id="modal_3">
+                                <button class="modal__close" onclick="closeModal_3 ()"></button>
+                                <div class="modal__container">
+                                    <p class="modal__title">Расскажите о своем проекте</p>
+                                    <p class="modal__description">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                                    <form class="feedback__form feedback__form_modal">
+                                        <label class="feedback__label feedback__label_modal">Телефон или почта</label>
+                                        <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
+                                        <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
+                                        <select class="feedback__select feedback__select_modal">
+                                            <option class="feedback__value" value="TG">Telegram</option>
+                                            <option class="feedback__value" value="WA">WhatsApp</option>
+                                            <option class="feedback__value" value="VB">Viber</option>
+                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
+                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
+                                        </select>
+                                        <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
+                                    </form>           
+                                </div> 
+                            </div>
                         </div>
 
                         <div class="tarif__include tarif__include_2">
@@ -316,7 +374,27 @@
                         <div class="tarif__description">
                             <p class="tarif__name">Разработка<br> интернет - магазина</p>
                             <p class="tarif__site">Полноценный каталог вашей продукции</p>
-                            <p class="tarif__discuss">Обсудить объект</p>
+                            <button class="tarif__discuss"  onclick="openModal_4 ()">Обсудить проект</button>
+                            <div class="modal modal_4" id="modal_4">
+                                <button class="modal__close" onclick="closeModal_4 ()"></button>
+                                <div class="modal__container">
+                                    <p class="modal__title">Расскажите о своем проекте</p>
+                                    <p class="modal__description">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                                    <form class="feedback__form feedback__form_modal">
+                                        <label class="feedback__label feedback__label_modal">Телефон или почта</label>
+                                        <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
+                                        <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
+                                        <select class="feedback__select feedback__select_modal">
+                                            <option class="feedback__value" value="TG">Telegram</option>
+                                            <option class="feedback__value" value="WA">WhatsApp</option>
+                                            <option class="feedback__value" value="VB">Viber</option>
+                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
+                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
+                                        </select>
+                                        <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
+                                    </form>           
+                                </div> 
+                            </div>
                         </div>
 
                         <div class="tarif__include tarif__include_3">
@@ -330,8 +408,135 @@
                         </div> 
                     </div>
                 </div> 
-            </div>b
-        </section> 
+            </div>
+        </section>
+        
+        <sectiom class="feedback">
+            <div class="container">
+                <div class="feedback__description">
+                    <p class="feedback__title">Расскажите о&nbsp;своем&nbsp;проекте</p>
+                    <p class="feedback__text">Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с&nbsp;вами в ближайшее время</p>
+                </div>
+
+                <div class="feedback__box">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="" class="social__icon">Vk</a>
+                        </li>
+
+                        <li class="social__item">
+                            <a href="" class="social__icon">Instagram</a>
+                        </li>
+
+                        <li class="social__item">
+                            <a href="" class="social__icon">Linkedin</a>
+                        </li>
+                    </ul>
+
+                    <form class="feedback__form">
+                        <label class="feedback__label">Телефон или почта</label>
+                        <input class="feedback__input" type="text" placeholder="Введите телефон">
+                        <label class="feedback__label">Выберите удобный способ связи</label>
+                        <select class="feedback__select">
+                            <option class="feedback__value" value="TG">Telegram</option>
+                            <option class="feedback__value" value="WA">WhatsApp</option>
+                            <option class="feedback__value" value="VB">Viber</option>
+                            <option class="feedback__value" value="RG">Звонок на телефон</option>
+                            <option class="feedback__value" value="SMS">SMS сообщение</option>
+                        </select>
+                        <button type="submit" class="feedback__btn">Отправить</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </sectiom>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contacts">
+                <nav class="header__navigation">
+                    <ul class="header__nav header__nav_footer">
+                        <li class="header__item">
+                            <a href="" class="header__link">Обо мне</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="" class="header__link">Портфолио</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="" class="header__link">Этапы работ</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="" class="header__link">Цены</a>
+                        </li>
+
+                        <li class="header__item">
+                            <a href="" class="header__link">Обратная связь</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__contacts">
+                    <a href="tel:+79237777777" class="header__link header__link_tel">8 923 777-77-77</a>
+                    <a href="mailto:alexdev@gmail.com" class="header__link header__link_mail">alexdev@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer__madeby">
+                <p class="footer__year">© 2020, Все права защищены</p>
+                <div class="footer__block">
+                    <p class="footer__course">Сделано в рамках курса учебной платформы&nbsp;</p><a href="" class="footer__link">Annblok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Menu
+
+        function openModal() {
+            document.getElementById("modal").style.left = "37%";
+            document.getElementById("modal").style.top = "63%";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.left = "-2000px";
+        }
+
+        function openModal_2 () {
+            document.getElementById("modal_2").style.left = "32%";
+            document.getElementById("modal_2").style.top = "0%";
+        }
+
+        function closeModal_2 () {
+            document.getElementById("modal_2").style.left = "-2000px";
+        }
+
+        function openModal_3 () {
+            document.getElementById("modal_3").style.left = "38.1%";
+            document.getElementById("modal_3").style.top = "46%";
+        }
+
+        function closeModal_3 () {
+            document.getElementById("modal_3").style.left = "-2000px";
+        }
+
+        function openModal_4 () {
+            document.getElementById("modal_4").style.left = "32%";
+            document.getElementById("modal_4").style.top = "0%";
+        }
+
+        function closeModal_4 () {
+            document.getElementById("modal_4").style.left = "-2000px";
+        }
+
+
+    </script>
 </body>
 </html>
