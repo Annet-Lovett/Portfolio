@@ -442,7 +442,7 @@ header {
         }
     }
 
-    &__img {
+    &__image {
         width: 4.2rem;
     }
 
@@ -470,40 +470,166 @@ header {
         width: 31.45rem;
         height: 16.2rem;
         border: 1px solid rgb(243, 242, 240);
-        background-repeat: no-repeat;
-        background-size: 27%;
-        background-position: center;
-        filter: grayscale(1) brightness(0.5);
-        transition: 0.2s;
+        position: relative;
+        cursor: pointer;
         &_html {
-            background-image: url(../images/skills/html5\ 1.svg);
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_css {
-            background-image: url(../images/skills/css-logo\ 1.svg);
+            .tooltiptext {
+                bottom: -105px;
+            }
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_js {
-            background-image: url(../images/skills/Unofficial_JavaScript_logo_2\ 1.svg);
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_jq {
-            background-image: url(../images/skills/jquery\ 1.svg);
+            .tooltiptext {
+                bottom: -105px;
+            }
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_boot {
-            background-image: url(../images/skills/bootstrap\ 1.svg);
+            .tooltiptext {
+                bottom: -87px;
+            }
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_php {
-            background-image: url(../images/skills/php\ 1.svg);
-            background-size: 37%;
+            .tooltiptext {
+                bottom: -100px;
+            }
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_vue {
-            background-image: url(../images/skills/Vue.js_Logo_2\ 1.svg);
+            .tooltiptext {
+                bottom: -105px;
+            }
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+
         &_wp {
-            background-image: url(../images/skills/Wordpress-Logo\ 1.svg);
+            &:hover {
+                .tooltiptext {
+                    visibility: visible;
+                    z-index: 2;
+                }
+            }
         }
+    }
+
+    &__img{        
+        filter: grayscale(1) brightness(0.5);
+        position: absolute;
+        top: 3.56rem;
+        left: 10rem;
+        width: 11rem;
+        height: 9.4rem;
+        transition: 0.2s;
+
+        &_js {
+            width: 8.1rem;
+            height: 8.7rem;
+            top: 3.9rem;
+            left: 11.7rem;
+        }
+
+        &_boot {
+            width: 8.1rem;
+            height: 8.1rem;
+            top: 4.2rem;
+            left: 11.8rem;
+        }
+
+        &_php {
+            width: 11.6rem;
+            height: 6.6rem;
+            top: 4.9rem;
+        }
+
+        &_vue {
+            width: 9.1rem;
+            height: 8rem;
+            top: 4.3rem;
+            left: 11.2rem;
+        }
+
+        &_wp {
+            width: 8.4rem;
+            height: 8.4rem;
+            top: 4rem;
+            left: 11.5rem;
+        }
+
         &:hover {
             filter: grayscale(0) brightness(1);
             cursor: pointer;
         }
+    }
+}
+
+.tooltiptext {
+    visibility: hidden;
+    font-size: 1.1rem;
+    max-width: 25rem;
+    background-color: $red;
+    color: $beige;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    position: absolute;
+    left: 15px;
+    bottom: -120px;
+    z-index: 1;
+    &::before {
+        content: "";
+        border: 10px solid transparent;
+        border-bottom: 10px solid $red;
+        position: absolute;
+        top: -18px;
+        left: 115px;
+        z-index: 10;
     }
 }
 
@@ -712,8 +838,8 @@ header {
 
     &__form {
         flex-basis: 49.2%;
-        font-size: 1.2rem;
-        line-height: 3.68;
+        font-size: 1.33rem;
+        line-height: 3.35;
         &_modal {
             border-top: 1px solid $beige;
             padding-top: 2.6rem;
@@ -726,7 +852,6 @@ header {
         &_modal {
             text-align: start;
             font-weight: 400;
-            font-size: 1.2rem;
             letter-spacing: 0.01rem;
         }
     }
@@ -742,7 +867,6 @@ header {
         letter-spacing: 0.07rem;
         margin-bottom: 1rem;
         &_modal {
-            font-size: 1.2rem;
             margin-top: -0.3rem;
             letter-spacing: 0.01rem;
             padding: 2.5rem 0 2.5rem 2.1rem;
@@ -750,37 +874,9 @@ header {
         }
     }
 
-    &__select {
-        display: block;
-        color: $beige;
-        background-color: rgba(243, 242, 240, 0.1);
-        border: 1px solid transparent;
-        outline: none;
-        cursor: pointer;
-        padding: 2.8rem 2rem 2.8rem 2rem;
-        letter-spacing: 0.07rem;
-        width: 100%;
-        appearance: none;
-        background-image: url(../images/icons/Arrow\ 3.svg);
-        background-repeat: no-repeat;
-        background-size: 12.79px 7.75px;
-        background-position: 95.5% center;
-        &_modal {
-            font-size: 1.2rem;
-            margin-top: -0.4rem;
-            padding: 2.5rem 2rem 2.5rem 2rem;
-        }
-    }
-
-    &__value {
-        color: $beige;
-        background-color: rgba(243, 242, 240, 0.1);
-        cursor: pointer;
-    }
-
     &__btn {
         display: block;
-        font-size: 1.6rem;
+        font-size: 1.78rem;
         font-weight: 700;
         color: $beige;
         background-color: $red;
@@ -800,11 +896,110 @@ header {
     }
 }
 
-option {
-    color: $beige;
-    background-color: rgba(243, 242, 240, 0.1);
-    cursor: pointer;
+.drop{
+    display:inline-block;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    
+    input[type="checkbox"]{
+        display:none;
+        &:checked{
+            ~.drop-items{
+                opacity:1;
+                max-height: 530px;
+            }
+            ~.control{       
+                z-index:99;
+                &:after{
+                    transform: rotate(180deg);
+                }
+            }
+            ~.overlay-close{
+                transform: none;
+                pointer-events:initial;
+            }
+        }
+    }
+    
+    .control{
+        position: relative;
+        color: $beige;
+        width: 530px;
+        display: inline-block;
+        cursor: pointer;
+        padding: 1.21em 1.3em;
+        background: rgba(56, 56, 58, 1);
+        transition: 0.2s;
+        font-size: 1.33rem;
+        font-weight: 400;
+        text-align: start;
+        &_modal {
+            width: 474px;
+        }
+
+        &:after{
+            content:"";
+            display:inline-block;      
+            height:1em;
+            width:1em;
+            margin-left: 84.8%;
+            background-image: url("../images/icons/Arrow\ 3.svg");
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: contain;      
+            transition: 0.2s;
+            align-items: center;
+        }
+    }
+    
+    &-items{
+        position: absolute;    
+        width: 96.9%;
+        text-align: start;
+        padding:0;
+        margin:0;
+        transition: 0.2s;    
+        background: rgba(56, 56, 58, 1);   
+        overflow:hidden;
+        max-height:0;
+        opacity:0;
+        z-index: 99;
+        padding-left: 2rem;
+        &_modal {
+            width: 96.3%;
+        }
+
+        .item-drop{
+        list-style:none;
+            a{        
+                display:block;
+                color: $beige;
+                text-decoration: none;
+                padding: 0;
+                transition: 0.2s;
+                opacity: 0.4;
+                @media (hover: hover) {
+                    &:hover{
+                        opacity: 1;
+                    }          
+                }
+            }
+        }
+    }
+    
+    .overlay-close{
+        position: fixed;    
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        z-index:9;
+        transform: translate(100%,0);
+        pointer-events:none;
+    }
 }
+
 
 .footer {
     height: 20.5rem;

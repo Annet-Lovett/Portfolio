@@ -67,13 +67,25 @@
                                 <label class="feedback__label feedback__label_modal">Телефон или почта</label>
                                 <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
                                 <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
-                                <select class="feedback__select feedback__select_modal">
-                                    <option class="feedback__value" value="TG">Telegram</option>
-                                    <option class="feedback__value" value="WA">WhatsApp</option>
-                                    <option class="feedback__value" value="VB">Viber</option>
-                                    <option class="feedback__value" value="RG">Звонок на телефон</option>
-                                    <option class="feedback__value" value="SMS">SMS сообщение</option>
-                                </select>
+                                <label class="drop">
+                                    <input type="checkbox" id="target-drop-example">
+                                    <span class="control control_modal">Telegram</span> 
+                                    <ul class="drop-items drop-items_modal">
+                                        <li class="item-drop">
+                                            <a target="_blank" href="#">WhatsApp</a>
+                                        </li>
+                                        <li class="item-drop">
+                                            <a target="_blank" href="#">Viber</a>
+                                        </li>
+                                        <li class="item-drop">
+                                            <a target="_blank" href="#">Звонок на телефон</a>
+                                        </li>
+                                        <li class="item-drop">
+                                            <a target="_blank" href="#">SMS сообщение</a>
+                                        </li>
+                                    </ul>
+                                    <label for="target-drop-example" class="overlay-close"></label>
+                                </label> 
                                 <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
                             </form>           
                         </div>           
@@ -224,7 +236,7 @@
                 <p class="benefits__info">Помимо создания сайтов и посадочных страниц я занимаюсь: настройкой контекстной рекламы в системах Яндекс.Директ и Google AdWords, а так же поисковым продвижением сайтов</p>
                 <div class="benefits__grid">
                     <div class="benefits__grid-item">
-                        <img src="images/icons/cil_money.svg" alt="" class="benefits__img">
+                        <img src="images/icons/cil_money.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Актуальные цены</p>
                             <p class="benefits__description">Ничего лишнего, без переплат, 100% отработка ваших денег</p>
@@ -232,7 +244,7 @@
                     </div>
 
                     <div class="benefits__grid-item">
-                        <img src="images/icons/cil_image-plus.svg" alt="" class="benefits__img">
+                        <img src="images/icons/cil_image-plus.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Более 2-х лет опыта</p>
                             <p class="benefits__description">Это моя основная деятельность, создано более 150+ сайтов</p>
@@ -240,7 +252,7 @@
                     </div>
 
                     <div class="benefits__grid-item">
-                        <img src="images/icons/bi_clock-history.svg" alt="" class="benefits__img">
+                        <img src="images/icons/bi_clock-history.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Оптимальные сроки</p>
                             <p class="benefits__description">Создание сайта любой сложности в самые сжатые сроки</p>
@@ -248,7 +260,7 @@
                     </div>
 
                     <div class="benefits__grid-item">
-                        <img src="images/icons/telephone-2 1.svg" alt="" class="benefits__img">
+                        <img src="images/icons/telephone-2 1.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Всегда на связи</p>
                             <p class="benefits__description">Не теряюсь и не проматываю сроки. Подхожу ответственно</p>
@@ -256,7 +268,7 @@
                     </div>
 
                     <div class="benefits__grid-item">
-                        <img src="images/icons/mdi_code-json.svg" alt="" class="benefits__img">
+                        <img src="images/icons/mdi_code-json.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Чистый код</p>
                             <p class="benefits__description">HTML код без всего лишнего, плюс адаптив под все устройства</p>
@@ -264,7 +276,7 @@
                     </div>
 
                     <div class="benefits__grid-item">
-                        <img src="images/icons/file 1.svg" alt="" class="benefits__img">
+                        <img src="images/icons/file 1.svg" alt="" class="benefits__image">
                         <div class="benefits__text">
                             <p class="benefits__title">Поддержка сайта</p>
                             <p class="benefits__description">Быстро устраню любую проблему на вашем сайте</p>
@@ -274,14 +286,38 @@
                 </div>            
                 
                 <div class="benefits__skills">
-                    <div class="benefits__icon benefits__icon_html"></div>
-                    <div class="benefits__icon benefits__icon_css"></div>
-                    <div class="benefits__icon benefits__icon_js"></div>
-                    <div class="benefits__icon benefits__icon_jq"></div>
-                    <div class="benefits__icon benefits__icon_boot"></div>
-                    <div class="benefits__icon benefits__icon_php"></div>
-                    <div class="benefits__icon benefits__icon_vue"></div>
-                    <div class="benefits__icon benefits__icon_wp"></div>
+                    <div class="benefits__icon benefits__icon_html">
+                        <img src="images/skills/html5 1.svg" alt="html" class="benefits__img benefits__img_html">
+                        <span class="tooltiptext">HTML <br> стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. </span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_css">
+                        <img src="images/skills/css-logo 1.svg" alt="css" class="benefits__img benefits__img_css">
+                        <span class="tooltiptext">CSS <br> формальный язык описания внешнего вида документа, написанного с использованием языка разметки. </span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_js">
+                        <img src="images/skills/Unofficial_JavaScript_logo_2 1.svg" alt="JS" class="benefits__img benefits__img_js">
+                        <span class="tooltiptext">JavaScript ES6+ <br> Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам</span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_jq">
+                        <img src="images/skills/jquery 1.svg" alt="" class="benefits__img benefits__img_jq">
+                        <span class="tooltiptext">jQuery <br> набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML.</span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_boot">
+                        <img src="images/skills/bootstrap 1.svg" alt="" class="benefits__img benefits__img_boot">
+                        <span class="tooltiptext">Bootstrap <br> свободный набор инструментов для создания сайтов и веб-приложений.</span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_php">
+                        <img src="images/skills/php 1.svg" alt="" class="benefits__img benefits__img_php">
+                        <span class="tooltiptext">PHP <br> C-подобный скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений.</span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_vue">
+                        <img src="images/skills/Vue.js_Logo_2 1.svg" alt="" class="benefits__img benefits__img_vue">
+                        <span class="tooltiptext">Vue.js <br> JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов.</span>
+                    </div>
+                    <div class="benefits__icon benefits__icon_wp">
+                        <img src="images/skills/Wordpress-Logo 1.svg" alt="" class="benefits__img benefits__img_wp">
+                        <span class="tooltiptext">WordPress <br> свободно распространяемая система управления содержимым сайта с открытым исходным кодом, написана на PHP.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -308,13 +344,25 @@
                                         <label class="feedback__label feedback__label_modal">Телефон или почта</label>
                                         <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
                                         <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
-                                        <select class="feedback__select feedback__select_modal">
-                                            <option class="feedback__value" value="TG">Telegram</option>
-                                            <option class="feedback__value" value="WA">WhatsApp</option>
-                                            <option class="feedback__value" value="VB">Viber</option>
-                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
-                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
-                                        </select>
+                                        <label class="drop">
+                                            <input type="checkbox" id="target-drop-example">
+                                            <span class="control control_modal">Telegram</span> 
+                                            <ul class="drop-items drop-items_modal">
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">WhatsApp</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Viber</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Звонок на телефон</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">SMS сообщение</a>
+                                                </li>
+                                            </ul>
+                                            <label for="target-drop-example" class="overlay-close"></label>
+                                        </label> 
                                         <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
                                     </form>           
                                 </div> 
@@ -346,13 +394,25 @@
                                         <label class="feedback__label feedback__label_modal">Телефон или почта</label>
                                         <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
                                         <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
-                                        <select class="feedback__select feedback__select_modal">
-                                            <option class="feedback__value" value="TG">Telegram</option>
-                                            <option class="feedback__value" value="WA">WhatsApp</option>
-                                            <option class="feedback__value" value="VB">Viber</option>
-                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
-                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
-                                        </select>
+                                        <label class="drop">
+                                            <input type="checkbox" id="target-drop-example">
+                                            <span class="control control_modal">Telegram</span> 
+                                            <ul class="drop-items drop-items_modal">
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">WhatsApp</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Viber</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Звонок на телефон</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">SMS сообщение</a>
+                                                </li>
+                                            </ul>
+                                            <label for="target-drop-example" class="overlay-close"></label>
+                                        </label> 
                                         <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
                                     </form>           
                                 </div> 
@@ -384,13 +444,25 @@
                                         <label class="feedback__label feedback__label_modal">Телефон или почта</label>
                                         <input class="feedback__input feedback__input_modal" type="text" placeholder="Введите телефон">
                                         <label class="feedback__label feedback__label_modal">Выберите удобный способ связи</label>
-                                        <select class="feedback__select feedback__select_modal">
-                                            <option class="feedback__value" value="TG">Telegram</option>
-                                            <option class="feedback__value" value="WA">WhatsApp</option>
-                                            <option class="feedback__value" value="VB">Viber</option>
-                                            <option class="feedback__value" value="RG">Звонок на телефон</option>
-                                            <option class="feedback__value" value="SMS">SMS сообщение</option>
-                                        </select>
+                                        <label class="drop">
+                                            <input type="checkbox" id="target-drop-example">
+                                            <span class="control control_modal">Telegram</span> 
+                                            <ul class="drop-items drop-items_modal">
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">WhatsApp</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Viber</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">Звонок на телефон</a>
+                                                </li>
+                                                <li class="item-drop">
+                                                    <a target="_blank" href="#">SMS сообщение</a>
+                                                </li>
+                                            </ul>
+                                            <label for="target-drop-example" class="overlay-close"></label>
+                                        </label> 
                                         <button type="submit" class="feedback__btn feedback__btn_modal">Отправить</button>
                                     </form>           
                                 </div> 
@@ -437,19 +509,29 @@
                         <label class="feedback__label">Телефон или почта</label>
                         <input class="feedback__input" type="text" placeholder="Введите телефон">
                         <label class="feedback__label">Выберите удобный способ связи</label>
-                        <select class="feedback__select">
-                            <option class="feedback__value" value="TG">Telegram</option>
-                            <option class="feedback__value" value="WA">WhatsApp</option>
-                            <option class="feedback__value" value="VB">Viber</option>
-                            <option class="feedback__value" value="RG">Звонок на телефон</option>
-                            <option class="feedback__value" value="SMS">SMS сообщение</option>
-                        </select>
+                        <label class="drop">
+                            <input type="checkbox" id="target-drop-example">
+                            <span class="control">Telegram</span> 
+                            <ul class="drop-items">
+                                <li class="item-drop">
+                                    <a target="_blank" href="#">WhatsApp</a>
+                                </li>
+                                <li class="item-drop">
+                                    <a target="_blank" href="#">Viber</a>
+                                </li>
+                                <li class="item-drop">
+                                    <a target="_blank" href="#">Звонок на телефон</a>
+                                </li>
+                                <li class="item-drop">
+                                    <a target="_blank" href="#">SMS сообщение</a>
+                                </li>
+                            </ul>
+                            <label for="target-drop-example" class="overlay-close"></label>
+                        </label> 
                         <button type="submit" class="feedback__btn">Отправить</button>
                     </form>
                 </div>
-
             </div>
-
 
         </sectiom>
     </main>
