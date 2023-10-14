@@ -80,6 +80,10 @@ header {
         }
         
         &_footer {
+            @media (max-width: $r_tab) {
+                display: flex;
+            }
+
             @media (max-width: $r_mob360) {
                 display: flex;
             }
@@ -94,6 +98,9 @@ header {
         padding: 0;
         &_footer {
             margin: 0;
+            @media (max-width: $r_tab) {
+                margin: auto;
+            }
         }
         &_burger {
             width: 100%;
@@ -1822,7 +1829,7 @@ header {
         width: 100%;
         justify-content: space-between;
         padding-top: 6.9rem;
-        @media (max-width: $r_mob360) {
+        @media (max-width: $r_tab) {
             padding-top: 6.16rem;
             flex-direction: column-reverse;
             gap: 4.2rem;
