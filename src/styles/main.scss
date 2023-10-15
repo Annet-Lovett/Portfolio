@@ -149,6 +149,10 @@ body {
     &__link {
         color: $beige;
         text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+            color: $red;
+        }
     }
     &_burger {
         width: 100%;
@@ -1771,7 +1775,7 @@ body {
             display:inline-block;      
             height:2rem;
             width:2rem;
-            margin-left: 84.8%;
+            margin-left: 80.8%;
             background-image: url("../images/icons/Arrow\ 3.svg");
             background-repeat:no-repeat;
             background-position: center;
@@ -1779,10 +1783,10 @@ body {
             transition: 0.2s;
             align-items: center;
             @media (max-width: $r_desk) {
-                margin-left: 80%;
+                margin-left: 75%;
             }
             @media (max-width: $r_mob360) {
-                margin-left: 78.2%;
+                margin-left: 70%;
             }
         }
 
@@ -1819,11 +1823,11 @@ body {
         &_modal {
             width: 96.3%;
             @media (max-width: $r_desk) {
-                width: 95.5%;
+                width: 95.7%;
             }
         }
         @media (max-width: $r_mob360) {
-            width: 95.9%;
+            width: 94.5%;
         }
 
         .item-drop{
@@ -1990,7 +1994,7 @@ body {
     }
 
     @media (max-width: $r_mob360) {
-        left: 12%;
+        left: 9%;
     }
 }
 
@@ -2010,7 +2014,7 @@ body {
     }
     @media (max-width: $r_mob360) {
         top: 410%;
-        left: 11%;
+        left: 9%;
     }
 }
 
@@ -2030,7 +2034,7 @@ body {
     }
     @media (max-width: $r_mob360) {
         top: 435%;
-        left: 11%;
+        left: 9%;
     }
 }
 
@@ -2050,7 +2054,7 @@ body {
     }
     @media (max-width: $r_mob360) {
         top: 462%;
-        left: 11%;
+        left: 9%;
     }
 }
 
@@ -2067,10 +2071,6 @@ body {
     row-gap: 20px;
     padding: 0rem 1.3rem;
     padding-bottom: 6rem;
-    @media (max-width: $r_mob500) {
-        max-width: 240px;
-        font-size: 16px;
-    }
 
     &__btn {
         margin: auto;
